@@ -1,0 +1,24 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^4.8.0"
+  },
+  "devDependencies": {
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^4.1.0"
+  },
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headed": "npm run test -- --headed",
+    "chormeTest": "npm run test -- --browser chrome",
+    "recortDesboardTes": "npm run --record --key e63c25c0-1530-47b6-a376-22f6dd01c712 --reporter mochawesome",
+    "GreenCartTest": "npm run test -- --spec \"cypress/integration/GreenCart/*\"  --reporter mochawesome",
+    "cy:run": "cypress run"
+  },
+  "author": "Candy Guerrero",
+  "license": "ISC"
+}

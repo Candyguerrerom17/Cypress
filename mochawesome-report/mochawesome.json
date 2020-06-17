@@ -1,0 +1,118 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-06-17T19:21:33.971Z",
+    "end": "2020-06-17T19:22:37.354Z",
+    "duration": 63383,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6cb852e4-f560-4582-b422-78cd05cc4927",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\testPageObject.js",
+      "file": "cypress\\integration\\tests\\testPageObject.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9e35d31-7bf1-40e1-bc69-f599c7363d3c",
+          "title": "Usando Page object Model",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test home",
+              "fullTitle": "Usando Page object Model Test home",
+              "timedOut": null,
+              "duration": 24400,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var home = new _HomePage[\"default\"]();\nhome.visit();\nhome.getUserName().type(_this.data.name);\nhome.getUserEmail().type(_this.data.email);\nhome.getUserPassw().type(_this.data.password);\nhome.getCheck(_this.data.check);\nhome.getTypeGender().select(_this.data.gender);\nhome.getOptionPofession().check(['option2']);\nhome.getDate().type('1992-02-17');\nhome.getButtonSubmit().click();\ncy.wait(2000);\nhome.getMessageSuccesfull().should('have.text', 'Success!');",
+              "err": {},
+              "uuid": "cc4d2069-37cd-4e7e-80df-3b17c864522a",
+              "parentUUID": "d9e35d31-7bf1-40e1-bc69-f599c7363d3c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test product with POM",
+              "fullTitle": "Usando Page object Model Test product with POM",
+              "timedOut": null,
+              "duration": 24639,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.config('defaultCommandTimeout', 4000);\nvar productHome = new _ProductHome[\"default\"]();\nvar home = new _HomePage[\"default\"]();\nproductHome.getMenu().click();\nproductHome.validateUrl().should('eq', 'https://www.rahulshettyacademy.com/angularpractice/shop');\n_this.data.equipes.forEach(function (date) {\n  cy.selectProduct(date);\n});\nproductHome.checkButton().click();\nvar sum = 0;\ncy.get('tr td:nth-child(4) strong').each(function ($el, index, $list) {\n  var cont = $el.text();\n  var val = parseInt(cont.replace(\"₹. \", \"\"));\n  sum = sum + val;\n}).then(function () {\n  cy.log(sum);\n});\ncy.get('tr td:nth-child(5) strong').each(function ($el, index, $list) {\n  var cont = $el.text();\n  var total = parseInt(cont.replace(\"₹. \", \"\"));\n  expect(sum).to.equal(total);\n});\ncy.wait(2000);\ncy.get('.btn.btn-success').click();\ncy.get('#country').type('prueba');\ncy.get('label[for=\"checkbox2\"]').click();\ncy.get('.nsm-dialog-animation-fade > .btn').then(function ($button) {\n  if ($button.is(':visible')) {\n    cy.wrap($button).click();\n  }\n});\ncy.get('input[type=\"submit\"]').click();\nhome.getMessageSuccesfull().should('have.text', 'Success!');",
+              "err": {},
+              "uuid": "180bb46f-3266-4078-a132-41e92c163beb",
+              "parentUUID": "d9e35d31-7bf1-40e1-bc69-f599c7363d3c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cc4d2069-37cd-4e7e-80df-3b17c864522a",
+            "180bb46f-3266-4078-a132-41e92c163beb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 49039,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": null,
+      "version": "4.1.0"
+    }
+  }
+}

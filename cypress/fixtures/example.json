@@ -1,0 +1,10 @@
+{
+  "name": "Candy Guerrero",
+  "email": "candygm17@gmail.com",
+  "password": "12345",
+  "check":"si",
+  "gender":"Female",
+  "employment":"Employed",
+   "equipes":["iphone X","Samsung Note 8","Nokia Edge"]
+
+}
