@@ -4,7 +4,8 @@
   "reporter": "mochawesome",
   "env": {
     "urlQa": "https://www.rahulshettyacademy.com/angularpractice/",
-    "CYPRESS_INSTALL_BINARY":"https://company.domain.com/cypress.zip npm install cypress"
+    "CYPRESS_INSTALL_BINARY":"2.0.1 npm install cypress@2.0.3",
+    "urlBaseWebSertice":"https://jsonplaceholder.cypress.io/"
   },
   "projectId": "rvd1jf"
 
